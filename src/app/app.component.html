@@ -1,3 +1,57 @@
-<h1>
-  {{title}}
-</h1>
+<ul>
+  <li *ngFor='let key of demo '>
+    <div>  Key: {{key.ServerDT}}</div>
+   <div>value: {{key.ResultType}} </div> 
+   <div>value: {{key.TagID}} </div> 
+   <div>value: {{key.mySUM}} </div> 
+  </li>
+</ul>
+
+
+
+<ul>
+  <li *ngFor='let key1 of data_all'>
+   <ul>
+      <li *ngFor='let key2 of key1 | keys'>
+      Key: {{key2.key}}, value: {{key2.value}}
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<!--
+<ul>
+  <li *ngFor='let key of demo'>
+   Key: {{key."TagID"}}
+  </li>
+</ul>-->
+
+
+<ul>  
+  <li *ngFor="let user of users">
+   <div> {{ user.name }} </div> 
+   <div> {{ user.age }} </div>  
+  </li>
+<ul> 
+
+  <tr *ngFor="let user of users">
+  <td>{{user.name}}</td>
+  <td>{{user.age}}</td>
+</tr> 
+
+
+-----------------------------------
+<ul>
+  <li *ngFor='let key of test_users.employees '>
+    <div>  firstName: {{key.firstName}}</div>
+   <div>lastName: {{key.lastName}} </div> 
+  </li>
+</ul>
+
+-----------------------------------
+<ul>
+  <li *ngFor='let key of test_v2.Table '>
+    <div>  firstName: {{key.TagID}}</div>
+   <div>lastName: {{key.mySUM}} </div> 
+  </li>
+</ul>
